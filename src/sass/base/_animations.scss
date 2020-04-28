@@ -26,20 +26,21 @@
   }
 }
 
-@keyframes changeWidth {
-  0% {
-    width: 80rem;
-  }
+@keyframes changeWidth-1 {
   100% {
-    width: 60rem;
+    padding: 0 15rem;
+    width: 1500px;
   }
 }
 
-@keyframes goLeft {
-  80% {
-    left: 50%;
-  }
+@keyframes changeFontSize {
   100% {
-    left: 30%;
+    font-size: 5rem;
+  }
+}
+
+@keyframes changeWidth-2 {
+  100% {
+    width: 50rem;
   }
 }

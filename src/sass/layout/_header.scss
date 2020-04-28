@@ -4,8 +4,10 @@
   height: 80rem;
   @include centering;
   width: 80rem;
+  background-color: $color-beige-1;
+  padding: 0 5rem;
 
-  animation: changeWidth 0.65s, goLeft 2.5s;
+  animation: changeWidth-1 0.65s, goLeft 2.5s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 
@@ -24,9 +26,6 @@
     font-weight: 300;
   }
   &__top {
-    border-bottom: 0.6rem solid $color-black;
-    top: 0;
-
     .header__text {
       display: block;
     }
@@ -42,7 +41,25 @@
         font-size: 10rem;
         font-weight: 700;
       }
+      & > :last-child {
+        animation: changeFontSize 0.5s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+      }
     }
+  }
+
+  &__line {
+    height: 0.6rem;
+    width: 60rem;
+    display: block;
+    background-color: $color-black;
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    animation: changeWidth-2 0.8s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
   }
 
   &__bottom {
