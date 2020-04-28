@@ -1,33 +1,45 @@
-@keyframes pulsate {
+@keyframes showTopText {
   0% {
-    transform: scale(1);
+    transform: translate3d(0, 100%, 0);
   }
-
-  7% {
-    transform: scale(1.05);
-  }
-
-  20% {
-    transform: scale(1);
-  }
-  27% {
-    transform: scale(1.05);
-  }
-
-  40% {
-    transform: scale(1);
-  }
-  47% {
-    transform: scale(1.05);
-  }
-
+  40%,
   60% {
-    transform: scale(1);
-  }
-  93% {
-    transform: scale(1.05);
+    transform: translate3d(0, 50%, 0);
   }
   100% {
-    transform: scale(1);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  20%,
+  60% {
+    transform: translate3d(0, 0, 0);
+    font-size: 6rem;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    font-size: 5rem;
+  }
+}
+
+@keyframes changeWidth {
+  0% {
+    width: 80rem;
+  }
+  100% {
+    width: 60rem;
+  }
+}
+
+@keyframes goLeft {
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 30%;
   }
 }
