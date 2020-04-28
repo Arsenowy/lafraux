@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+// 1rem = 10px;
+html {
+  font-size: 62.5%; // 10px/16px = 62.5%
+
+  // @include respond(tab-land) {
+  //   font-size: 50%; //1 rem = 9px
+  // }
+
+  // @include respond(tab-port) {
+  //   //tab-port or smaller like a phone
+  //   font-size: 45%; //1 rem = 8px
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: #444;
+
+  // @include respond(phone) {
+  //   padding: 0;
+  // }
+}

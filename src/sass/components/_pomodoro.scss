@@ -1,0 +1,35 @@
+.tomato {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__select {
+        width: 80px;
+        height: 30px;
+        padding: 5px;
+        margin: 2rem;
+
+    }
+
+    &__button {
+        width: 150px;
+        height: 30px;
+        background-color: $color-beige;
+    }
+
+    &__img {
+        width: 20rem;
+        height: auto;
+        display: flex;
+
+    }
+
+    &__paragraph {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
