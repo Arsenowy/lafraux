@@ -81,13 +81,16 @@
     width: 500px;
     height: 90%;
 
-    &--img {
+    &--img-0,
+    &--img-1,
+    &--img-2  {
+      position: relative;
+      display: none;
       width: 100%;
       height: 100%;
       overflow: hidden;
       transform: translateX(100%);
       animation: showPhotoRight 1s;
-      animation-delay: 3s;
       animation-fill-mode: forwards;
     }
   }

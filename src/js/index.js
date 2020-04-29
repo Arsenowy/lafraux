@@ -5,6 +5,13 @@ import "regenerator-runtime/runtime";
 // local
 import "../sass/style.scss";
 
+import * as slider from './Slider';
+
+setTimeout(() => {
+    slider.showSlider();
+}, 3000)
+
+
 // import axios from "axios";
 
 // export default class Search {
