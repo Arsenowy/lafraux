@@ -73,25 +73,22 @@
       transform: translate(0, -100%);
     }
   }
-  &__slider {
+  &__slider--0,
+  &__slider--1,
+  &__slider--2 {
+    display: none;
     position: absolute;
+    overflow: hidden;
     right: 5rem;
     top: 50%;
-    transform: translateY(-50%);
     width: 500px;
     height: 90%;
-
-    &--img-0,
-    &--img-1,
-    &--img-2  {
-      position: relative;
-      display: none;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      transform: translateX(100%);
+    transform: translateX(100%);
       animation: showPhotoRight 1s;
       animation-fill-mode: forwards;
-    }
+  }
+  &__slider--img {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -9,7 +9,7 @@ import * as slider from './Slider';
 
 setTimeout(() => {
     slider.showSlider();
-}, 3000)
+}, 2750)
 
 
 // import axios from "axios";
