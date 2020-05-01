@@ -12,6 +12,10 @@ import "../sass/style.scss";
 // }, 1900)
 
 
+import * as parallax from './parallax';
+
+parallax.parallaxFunction();
+
 // import axios from "axios";
 
 // export default class Search {

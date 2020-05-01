@@ -18,11 +18,20 @@
   20%,
   60% {
     transform: translate3d(0, 0, 0);
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
   100% {
     transform: translate3d(0, 0, 0);
     font-size: 5rem;
+  }
+}
+
+@keyframes showBottom {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
 

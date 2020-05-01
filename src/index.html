@@ -6,7 +6,6 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
       <header class="header">
         <div class="header__top">
           <div class="header__container header__element">
@@ -18,18 +17,47 @@
         <div class="header__bottom">
           <span class="header__text header__element">to change your style</span>
         </div>
-        <div class="navigation">
-          <p class="navigation__button">men</p>
-          <p class="navigation__button">women</p>
-          <p class="navigation__button">kid</p>
-        </div>
         <div class="header__video-box">
-          <video class="header__video" autoplay loop>
-            <source src="video/fashion.mp4">
+          <video class="header__video" loop autoplay>
+            <source src="video/fashion.mp4" class = "header__video--src" type="video/mp4">
           </video>
+          <p class="header__video--parahraph">view more</p>
         </div>
 
-        <!-- <div class="header__slider">
+        <div class="navigation">
+
+          <p class="navigation__button">
+            <a href="#section-man" class="navigation__link">man</a>
+          </p>
+
+          <p class="navigation__button">
+            <a href="#section-woman" class="navigation__link">woman</a>
+          </p>
+
+          <p class="navigation__button">
+            <a href="#section-kid" class="navigation__link">kids</a></p>
+        </div>
+
+        <div class="header__photo header__photo--0" id="man-photo-0">
+          <img src="https://static.zara.net/photos//mkt/spots/ss20-north-traveler-man/layout-desktop-01//look2-traveler-man-look2_0.jpg?ts=1583239108441&imwidth=1308" alt="" class="header__photo-img">
+        </div>
+        <!-- <div class="header__photo header__photo--1" id="man-photo-1">
+          <img src="https://static.zara.net/photos//mkt/spots/ss20-north-traveler-man/layout-desktop-01//look3-traveler-man-look43_0.jpg?ts=1583239108441&imwidth=759" alt="" class="header__photo-img">
+        </div>
+        <div class="header__photo header__photo--2" id="man-photo-2">
+          <img src="https://static.zara.net/photos//mkt/spots/ss20-north-traveler-man/layout-desktop-01//look1-traveler-man-look1_0.jpg?ts=1583239108441&imwidth=1333" alt="" class="header__photo-img">
+        </div> -->
+      </header>
+
+    <!-- <section class="section-man" id="section-man"> -->
+    <!-- <section class="section-woman" id="section-woman"> -->
+    <!-- <section class="section-kid" id="section-kid"> -->
+
+    </section>
+  </body>
+</html>
+
+<!-- <div class="header__slider">
           <img
             src="https://www.reserved.com/media/catalog/product/Z/V/ZV618-80X-001.jpg"
             alt=""
@@ -51,10 +79,4 @@
             alt=""
             class="header__slider--img-2"
           />
-
         </div> -->
-
-      </header>
-    </div>
-  </body>
-</html>
