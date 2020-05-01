@@ -1,0 +1,8 @@
+.navigation {
+    display: flex;
+
+    &__button {
+        text-transform: uppercase;
+        padding: 2rem;
+    }
+}

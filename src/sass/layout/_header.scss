@@ -7,7 +7,7 @@
   background-color: $color-beige-1;
   padding: 0 5rem;
 
-  animation: changeWidth-1 0.65s, goLeft 2.5s;
+  animation: changeWidth-1 1s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 
@@ -73,22 +73,37 @@
       transform: translate(0, -100%);
     }
   }
-  &__slider--0,
-  &__slider--1,
-  &__slider--2 {
-    display: none;
+  &__slider,
+  &__video-box {
     position: absolute;
-    overflow: hidden;
     right: 5rem;
     top: 50%;
     width: 500px;
     height: 90%;
-    transform: translateX(100%);
-      animation: showPhotoRight 1s;
+    transform: translateY(-50%);
+
+      &--img-0,
+      &--img-1,
+      &--img-2 {
+        display: none;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        animation: showPhotoRight 1.2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &__video {
+      overflow: hidden;
+      transform: translateX(-100%);
+      animation: showPhotoRight 1.2s;
+      animation-delay: 3s;
       animation-fill-mode: forwards;
+      width: 100%;
+      height: 100%;
+    }
+
   }
-  &__slider--img {
-    width: 100%;
-    height: 100%;
-  }
-}

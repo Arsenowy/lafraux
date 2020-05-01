@@ -5,11 +5,11 @@ import "regenerator-runtime/runtime";
 // local
 import "../sass/style.scss";
 
-import * as slider from './Slider';
+// import * as slider from './Slider';
 
-setTimeout(() => {
-    slider.showSlider();
-}, 2750)
+// setTimeout(() => {
+//     slider.showSlider();
+// }, 1900)
 
 
 // import axios from "axios";
