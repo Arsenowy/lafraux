@@ -11,17 +11,11 @@ import "../sass/style.scss";
 //     slider.showSlider();
 // }, 1900)
 
-
+//import parallax scrolling
 import * as parallax from './parallax';
+
+
 
 parallax.parallaxFunction();
 
-// import axios from "axios";
-
-// export default class Search {
-//   async getResults() {
-//     try {
-//       const res = await axios(``);
-//     }
-//   }
-// }
+////////////////////////////////////////////////////////////////

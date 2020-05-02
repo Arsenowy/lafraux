@@ -2,14 +2,10 @@
   color: $color-black;
   font-family: Montserrat, Arial, sans-serif;
   height: 80rem;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  @include centering;
   width: 80rem;
   background-color: $color-beige-1;
   padding: 0 5rem;
-  margin: 2rem 0 20rem;
 
   animation: changeWidth-1 1s;
   animation-delay: 3s;
@@ -124,21 +120,6 @@
       }
 
 
-    }
-
-    &__photo {
-      position: absolute;
-
-      &-img {
-        width: 100%;
-        height: 100%;
-      }
-      &--0 {
-        width: 320px;
-        height: 400px;
-        bottom: -25%;
-        left: -5vw;
-      }
     }
 
   }
