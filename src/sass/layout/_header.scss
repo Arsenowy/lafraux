@@ -7,7 +7,34 @@
   background-color: $color-beige-1;
   padding: 0 5rem;
 
-  animation: changeWidth-1 1s;
+  @media only screen and (max-width: 120em) {
+    animation-name: changeWidthLarge;
+  };
+
+  @media only screen and (max-width: 93.75em) {
+    animation-name: changeWidthMedium;
+  };
+
+  @include respond(sm) {
+    animation-name: none;
+    width: 100vw;
+    height: 100%;
+  }
+  @include respond(tab) {
+    padding: 0;
+    color: $color-white;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12)),
+    url('https://static.zara.net/photos//mkt/spots/ss20-north-traveler-man/layout-desktop-06//look13-traveler-man-look13_0.jpg?ts=1583239117404&imwidth=964');
+    background-size: cover;
+  }
+
+
+  // @media only screen and (max-width: 120em) {
+  //   animation: changeWidthSmall;
+  // };
+
+  animation-duration: 1s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 
@@ -24,8 +51,17 @@
     position: absolute;
     line-height: 1.25;
     font-weight: 300;
+    z-index: 10;
   }
+
   &__top {
+    z-index: 10;
+    @include respond(tab) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
     .header__text {
       display: block;
     }
@@ -40,6 +76,11 @@
         color: $color-grey-dark-1;
         font-size: 10rem;
         font-weight: 700;
+
+        @include respond(tab) {
+          color: $color-white;
+        }
+
       }
       & > :last-child {
         animation: changeFontSize 0.5s;
@@ -61,10 +102,26 @@
     animation: changeWidth-2 0.8s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
+    z-index: 10;
+
+
+    @include respond(tab) {
+      width: 50rem;
+      background-color: $color-white;
+      left: 47%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
   }
 
   &__bottom {
+    z-index: 10;
     bottom: 0;
+
+    @include respond(tab) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     .header__element {
       animation: showBottomText 2s;
@@ -79,9 +136,24 @@
     position: absolute;
     right: 5rem;
     top: 50%;
-    width: 500px;
+    width: 50rem;
     height: 90%;
     transform: translateY(-50%);
+    transition: 0.5s all;
+
+
+    @media only screen and (max-width: 93.75em) {
+      width: 45rem;
+    };
+
+    @include respond(sm) {
+      height: 90vh;
+    }
+    @include respond(tab) {
+      width: 100vw;
+      height: auto;
+      right: 0;
+    }
 
       &--img-0,
       &--img-1,
@@ -101,11 +173,18 @@
       position: relative;
       overflow: hidden;
       transform: translateX(-100%);
-      animation: showPhotoRight 1.2s;
+      animation: showVideoRight 1.2s;
       animation-delay: 3s;
       animation-fill-mode: forwards;
-      width: 100%;
       height: 100%;
+      width: auto;
+
+      @include respond(tab) {
+        filter: brightness(85%);
+
+      }
+
+
 
       &--src:hover {
         transform: scale(1.2);
@@ -118,9 +197,6 @@
         color: white;
         opacity: 0;
       }
-
-
     }
-
   }
 

@@ -2,6 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: 20;
+    @include respond(tab) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
     &__button {
         text-transform: uppercase;

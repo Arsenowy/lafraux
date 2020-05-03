@@ -1,3 +1,4 @@
+//header spans
 @keyframes showTopText {
   0% {
     transform: translate3d(0, 100%, 0);
@@ -34,17 +35,38 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
-@keyframes changeWidth-1 {
+/////////////////////////////////////////////
+//responive header video-box
+@keyframes changeWidthLarge {
   100% {
     padding: 0 15rem;
-    width: 1500px;
+    width: 93.75em;
   }
 }
+@keyframes changeWidthMedium {
+  100% {
+    padding: 0 12rem;
+    width: 90vw;
+  }
+}
+@keyframes changeWidthSmall {
+  100% {
+    width: 100vw;
+  }
+}
+//////////////////////////////////
+// header spans
 
 @keyframes changeFontSize {
   100% {
     font-size: 5rem;
+  }
+}
+////////////////////////
+// width of header line between spans
+@keyframes changeWidth-1 {
+  100% {
+    width: 40rem;
   }
 }
 
@@ -53,8 +75,9 @@
     width: 50rem;
   }
 }
-
-@keyframes showPhotoRight {
+///////////////////////////
+// header video
+@keyframes showVideoRight {
   0% {
     transform: translateX(-100%);
   }

@@ -33,13 +33,11 @@ export const parallaxFunction = () => {
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
 
-        if (offset > vh && offset < 1540){
+        if (offset > vh){
         man1.style.left = (`${-Math.pow(offset - vh, 2)/500 + 650}px`);
         man1.style.transform = `translateY(${offset - vh}px)`;
         }
-        if (offset >= 1540){
-            man1.style.transform = `translate(${-Math.pow(offset - 1540, 2)*0.007}px, ${offset - vh}px)`
-                }
+
 
 
     });
@@ -62,7 +60,7 @@ export const parallaxFunction = () => {
             man3.style.transform = `translateY(${offset - vh}px)`;
             }
         if (offset >= 1540){
-            man3.style.transform = `translate(${-Math.pow(offset - 1540, 2)*0.008}px, ${offset - vh}px)`
+            man3.style.transform = `translate(${-Math.pow(offset - 1540, 2)*0.009}px, ${offset - vh}px)`
         }
 
 
