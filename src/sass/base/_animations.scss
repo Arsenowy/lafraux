@@ -37,21 +37,22 @@
 }
 /////////////////////////////////////////////
 //responive header video-box
-@keyframes changeWidthLarge {
+@keyframes changeWidthHuge {
   100% {
     padding: 0 15rem;
+    width: 125em;
+  }
+}
+@keyframes changeWidthLarge {
+  100% {
+    padding: 2rem 12rem;
     width: 93.75em;
   }
 }
 @keyframes changeWidthMedium {
   100% {
-    padding: 0 12rem;
+    padding: 2rem 10rem;
     width: 90vw;
-  }
-}
-@keyframes changeWidthSmall {
-  100% {
-    width: 100vw;
   }
 }
 //////////////////////////////////

@@ -6,10 +6,13 @@
   width: 80rem;
   background-color: $color-beige-1;
   padding: 0 5rem;
+  animation-name: changeWidthLarge;
 
-  @media only screen and (max-width: 120em) {
-    animation-name: changeWidthLarge;
-  };
+  @include respond(big-desktop) {
+    width: 100rem;
+    height: 100rem;
+    animation-name: changeWidthHuge;
+  }
 
   @media only screen and (max-width: 93.75em) {
     animation-name: changeWidthMedium;
@@ -47,11 +50,16 @@
 
   &__element {
     font-size: 6rem;
-    padding: 1rem 2rem;
+    padding: 2rem;
     position: absolute;
     line-height: 1.25;
     font-weight: 300;
     z-index: 10;
+
+    @include respond(tab) {
+      padding: 0 2rem;
+      line-height: 1;
+    }
   }
 
   &__top {
@@ -86,6 +94,10 @@
         animation: changeFontSize 0.5s;
         animation-delay: 3s;
         animation-fill-mode: forwards;
+
+        @include respond(tab) {
+          line-height: 2;
+        }
       }
     }
   }
@@ -130,6 +142,9 @@
       top: 0;
       transform: translate(0, -100%);
       font-size: 5.5rem;
+      @include respond(tab) {
+        line-height: 2;
+      }
     }
   }
   &__video-box {
@@ -140,6 +155,10 @@
     height: 90%;
     transform: translateY(-50%);
     transition: 0.5s all;
+
+    @include respond(big-desktop) {
+      width: 75rem;
+    }
 
 
     @media only screen and (max-width: 93.75em) {
@@ -200,3 +219,10 @@
     }
   }
 
+.header__bottom,
+.header__top,
+.header__line {
+  @include respond(phone) {
+    transform: translate(-50%, 100px)
+  }
+}
