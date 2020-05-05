@@ -14,27 +14,35 @@ html {
 
 
   @include respond(lg) {
-    font-size: 56.25%; //1 rem = 9.5px
+    font-size: 56.25%; //1 rem = 9px
   }
 
   @include respond(md) {
-    font-size: 50%; //1 rem = 9px
+    font-size: 50%; //1 rem = 8px
   }
 
-
-
-  // @include respond(tab-port) {
-  //   //tab-port or smaller like a phone
-  //   font-size: 45%; //1 rem = 8px
-  // }
+  @include respond(phone) {
+    font-size: 45%; //1 rem = 7px
+  }
 }
 
 body {
   box-sizing: border-box;
   background-color: $color-white;
   overflow-x: hidden;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 50;
 
+
+  background-color: white;
   // @include respond(phone) {
   //   padding: 0;
   // }
+}
+@media (min-aspect-ratio: 19/9) and (min-width: 1920px) {
+  body {
+    width: 2000px;
+  }
 }
