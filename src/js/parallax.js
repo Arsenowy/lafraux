@@ -26,16 +26,14 @@ export const parallaxFunction = () => {
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
         if (offset > vh){
-        man0.style.left = (`${-Math.pow(offset - vh, 2)/200}px`);
-        man0.style.transform = `translateY(${offset - vh}px)`
+        man0.style.transform = `translate(${-Math.pow(vh-offset, 2)/175}px, ${offset - vh}px)`
         }
     });
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
 
         if (offset > vh){
-        man1.style.left = (`${-Math.pow(offset - vh, 2)/500 + 650}px`);
-        man1.style.transform = `translateY(${offset - vh}px)`;
+        man1.style.transform = `translate(${-Math.pow(offset - vh, 2)/300}px, ${offset - vh}px)`;
         }
 
 
@@ -44,23 +42,23 @@ export const parallaxFunction = () => {
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
 
-        if (offset > vh && offset < 1540){
-            man2.style.left = (`${-Math.pow(offset - vh, 2)/800 + 1350}px`);
-            man2.style.transform = `translateY(${offset - vh}px)`;
+        if (offset > vh && offset < (vh+250)){
+            man2.style.transform = `translate(0, ${offset - vh}px)`;
             }
-        if (offset >= 1540){
-                man2.style.transform = `translate(${-Math.pow(offset - 1540, 2)*0.007}px, ${offset - vh}px)`
-                    }
+        if (offset >= (vh+250)){
+            man2.style.fontSize = `${8 + Math.sqrt(offset - 1238)/100}rem`;
+            man2.style.transform = `translate(${-Math.pow(offset - (vh+250), 2)/150}px, ${offset - vh}px)`;
+
+            }
     });
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
 
-        if (offset > vh && offset < 1540){
-            man3.style.left = (`${-Math.pow(offset - vh, 2)/800 + 1350}px`);
-            man3.style.transform = `translateY(${offset - vh}px)`;
+        if (offset > vh && offset < (vh+250)){
+            man3.style.transform = `translate(0, ${offset - vh}px)`;
             }
-        if (offset >= 1540){
-            man3.style.transform = `translate(${-Math.pow(offset - 1540, 2)*0.009}px, ${offset - vh}px)`
+        if (offset >= (vh+250)){
+            man3.style.transform = `translate(${-Math.pow(offset - (vh+250), 2)/170}px, ${offset - vh}px)`;
         }
 
 
