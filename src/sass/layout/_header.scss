@@ -224,7 +224,7 @@
 .header__line {
   transform: translateY(50px);
 
-  @include respond(phone) {
+  @include respond(tab) {
     transform: translate(-50%, 100px)
   }
 }
