@@ -1,0 +1,101 @@
+.collection {
+
+    //text section
+    &__typography {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        font-family: Roboto, sans-serif;
+
+        &--1 {
+            align-items: flex-end;
+        }
+
+        &--2 {
+            align-items: flex-start;
+        }
+    }
+
+    &__tittle {
+        font-size: 8rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    &__paragraph {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    &__brand {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    //////////////////////////////
+    //photo section
+
+    &__photos {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+        padding: 5rem 0;
+        margin: 0 10rem;
+    }
+
+    &__photo {
+        background-size: cover;
+        background-position: center top;
+        min-width: 270px;
+        max-width: 18vw;
+
+        //first img is 2 times higher then others
+        &--1-1,
+        &--2-1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        //elegance in a new edition
+        &--1 {
+            &-1 {
+                background-image: url('https://www.reserved.com/media/catalog/product/Y/B/YB711-59P-001_1.jpg');
+            }
+
+            &-2 {
+                background-image: url('https://www.reserved.com/media/catalog/product/Y/B/YB720-59M-003_2.jpg');
+
+            }
+            &-3 {
+                background-image: url('https://www.reserved.com/media/catalog/product/X/I/XI969-00X-002.jpg');
+            }
+        }
+
+        //home office
+        &--2 {
+            &-1 {
+                background-image: url('https://www.reserved.com/media/catalog/product/X/L/XL014-88X-001.jpg');
+            }
+
+            &-2 {
+                background-image: url('https://www.reserved.com/media/catalog/product/X/L/XL848-09M-004_6.jpg');
+
+            }
+            &-3 {
+                background-image: url('https://www.reserved.com/media/catalog/product/X/K/XK709-99X-002.jpg');
+            }
+        }
+
+
+    }
+}
+
+// #collection-2 {
+//     @media only screen and (min-width: 96.875em) {
+//         transform: translateY(-30vh);
+//     }
+
+// }

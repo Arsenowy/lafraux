@@ -3,12 +3,12 @@ const man1 = document.querySelector('.mans__photo--1');
 const man2 = document.querySelector('.mans__photo--2');
 const man3 = document.querySelector('.mans__photo--3');
 let vh = window.innerHeight;
-const section1 = document.querySelector('.collection-1');
+const section1 = document.querySelector('#collection-1');
 
 //get viewport high when size is changing
 window.addEventListener('resize', () => {
     vh = window.innerHeight;
-    console.log(vh)
+    console.log(vh);
 });
 
 //parallax scroll
@@ -66,22 +66,23 @@ export const parallaxFunction = () => {
         let offset = window.pageYOffset;
 
         if (vh < 1000) {
-            if (offset < 1530){
+            if (offset < 1230){
                 section1.style.transform = `translate(0, ${offset - vh}px)`;
-            if (offset >= 1530 && offset < 1800){
-                section1.style.transform = `translate(0, ${2*vh-0.9*offset}px)`;
-                }
             }
+            // if (offset >= 1330 && offset < 1800){
+            //     section1.style.transform = `translate(0, ${2*vh-0.1*offset}px)`;
+            //     }
+
         }
-        /////// TESTING responsivnessgit
-        // if (vh >= 1000) {
-        //     if (offset < 1530){
-        //         section1.style.transform = `translate(0, ${offset - vh}px)`;
-        //     if (offset >= 1530 && offset < 2400){
-        //         section1.style.transform = `translate(0, ${2*vh-0.9*offset}px)`;
-        //         }
-        //     }
-        // }
+    //     /// TESTING responsivnessgit
+    //     if (vh >= 1000) {
+    //         if (offset < 1530){
+    //             section1.style.transform = `translate(0, ${offset - vh}px)`;
+    //         if (offset >= 1530 && offset < 2400){
+    //             section1.style.transform = `translate(0, ${2*vh-2*offset}px)`;
+    //             }
+    //         }
+    //     }
 
     });
 
