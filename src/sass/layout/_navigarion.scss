@@ -66,3 +66,37 @@
         text-shadow: 0 2px 6px rgba($color: #000000, $alpha: .2);
     }
 }
+
+.navigation-bar {
+    font-family: roboto, sans-serif;
+    position: fixed;
+    z-index: 999;
+    top: 5rem;
+    left: 10rem;
+    display: block;
+    padding: 1rem;
+    line-height: 1.25;
+    display: none;
+    transition: 0.5s ease-in-out all;
+
+
+    &__header {
+        font-size: 9rem;
+        font-weight: 900;
+        opacity: 0.7;
+    }
+
+    &__link,
+    &__link:visited,
+    &__link:link {
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    &__text {
+        font-size: 2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+}
