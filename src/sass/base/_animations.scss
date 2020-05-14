@@ -86,3 +86,18 @@
     transform: translateX(0);
   }
 }
+
+//////////////////
+// logo
+
+@keyframes showLogoLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

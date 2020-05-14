@@ -2,10 +2,13 @@ const man0 = document.querySelector('.mans__photo--0');
 const man1 = document.querySelector('.mans__photo--1');
 const man2 = document.querySelector('.mans__photo--2');
 const man3 = document.querySelector('.mans__photo--3');
-let vh = window.innerHeight;
 const section1 = document.querySelector('#collection-1');
+const logo = document.querySelector('.logo');
+let vh = window.innerHeight;
 
 //get viewport high when size is changing
+
+
 window.addEventListener('resize', () => {
     vh = window.innerHeight;
     console.log(vh);
@@ -24,6 +27,14 @@ export const parallaxFunction = () => {
         console.log(vh);
     });
 
+    //logo in left corner
+    window.addEventListener('scroll', () => {
+        let offset = window.pageYOffset;
+        if (offset > vh){
+        logo.classList.add('logo__active');
+        }
+        else logo.classList.remove('logo__active');
+    });
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
         if (offset > vh){
@@ -36,8 +47,6 @@ export const parallaxFunction = () => {
         if (offset > vh){
         man1.style.transform = `translate(${-Math.pow(offset - vh, 2)/300}px, ${offset - vh}px)`;
         }
-
-
 
     });
     window.addEventListener('scroll', () => {
