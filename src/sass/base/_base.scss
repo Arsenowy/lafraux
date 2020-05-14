@@ -38,8 +38,18 @@ body {
   //   padding: 0;
   // }
 }
-@media (min-aspect-ratio: 19/9) and (min-width: 1920px) {
-  body {
-    width: 2000px;
-  }
+
+.rightClickBox {
+  font-family: roboto;
+  box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  z-index: 999999;
+  display: none;
+  transition: 0.2s display;
+}
+#box-paragraph {
+  cursor: pointer;
 }
