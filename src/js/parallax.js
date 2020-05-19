@@ -75,7 +75,7 @@ export const parallaxFunction = () => {
         let offset = window.pageYOffset;
 
         if (vh < 1000) {
-            if (offset < 1230){
+            if (offset < 1330){
                 section1.style.transform = `translate(0, ${offset - vh}px)`;
             }
             // if (offset >= 1330 && offset < 1800){
@@ -83,15 +83,15 @@ export const parallaxFunction = () => {
             //     }
 
         }
-    //     /// TESTING responsivnessgit
-    //     if (vh >= 1000) {
-    //         if (offset < 1530){
-    //             section1.style.transform = `translate(0, ${offset - vh}px)`;
-    //         if (offset >= 1530 && offset < 2400){
-    //             section1.style.transform = `translate(0, ${2*vh-2*offset}px)`;
-    //             }
-    //         }
-    //     }
+        /// TESTING responsivnessgit
+        if (vh >= 1000) {
+            if (offset < 1530){
+                section1.style.transform = `translate(0, ${offset - vh}px)`;
+            if (offset >= 1530 && offset < 2400){
+                section1.style.transform = `translate(0, ${2*vh-2*offset}px)`;
+                }
+            }
+        }
 
     });
 
