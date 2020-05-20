@@ -39,7 +39,7 @@
     //////////////////////////////
     //photo section
 
-    &__photos {
+    &__gallery {
         display: grid;
 
         grid-template-columns: repeat(2, 1fr);
@@ -53,6 +53,7 @@
         background-position: center top;
         min-width: 270px;
         max-width: 18vw;
+        transition: all 1s ease;
 
         //first img is 2 times higher then others
         &--1-1,
@@ -95,9 +96,3 @@
     }
 }
 
-#collection-2 {
-    @media only screen and (min-width: 135em) {
-        transform: translateY(-30vh);
-    }
-
-}

@@ -42,15 +42,16 @@
                 content: 'ACTIVE UTILITY STORIES';
                 background-color: white;
                 padding: 2rem;
-                display: inline;
                 font-weight: 700;
                 position: absolute;
                 z-index: 5;
+                display: inline-block;
+                width: auto;
                 top: 70%;
-                left: -90px;
+                right: 100px;
+                transform: translateX(-7rem);
                 line-height: 1.1;
-                //fixing bug
-                transform: translateX(1px);
+
 
             }
         }
