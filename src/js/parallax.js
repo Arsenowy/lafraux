@@ -2,6 +2,7 @@ const man0 = document.querySelector('.mans__photo--0');
 const man1 = document.querySelector('.mans__photo--1');
 const man2 = document.querySelector('.mans__photo--2');
 const man3 = document.querySelector('.mans__photo--3');
+const card = document.querySelector('.mans__whiteCard');
 const section1 = document.querySelector('#collection-1');
 const section2 = document.querySelector('#collection-2');
 const logo = document.querySelector('.logo');
@@ -71,9 +72,11 @@ export const parallaxFunction = () => {
 
         if (offset > vh && offset < (vh+250)){
             man3.style.transform = `translate(0, ${offset - vh}px)`;
+            card.style.transform = `translate(0, ${offset - vh}px)`;
             }
         if (offset >= (vh+250)){
             man3.style.transform = `translate(${-Math.pow(offset - (vh+250), 2)/170}px, ${offset - vh}px)`;
+            card.style.transform = `translate(${-Math.pow(offset - (vh+250), 2)/170}px, ${offset - vh}px)`;
         }
     });
     //
