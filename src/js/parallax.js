@@ -88,6 +88,14 @@ export const parallaxFunction = () => {
         if (vh < 1000) {
             if (offset < 1330){
                 section1.style.transform = `translate(0, ${offset - vh}px)`;
+
+                if (vw > 1300) {
+                    section2.style.transform = `translate(0, ${offset - 1.3*vh}px)`;
+                }
+                else {
+                    section2.style.transform = `translate(0, ${offset - vh}px)`;
+                }
+
             }
             // if (offset >= 1330 && offset < 1800){
             //     section1.style.transform = `translate(0, ${2*vh-0.1*offset}px)`;
@@ -98,8 +106,10 @@ export const parallaxFunction = () => {
         if (vh >= 1000) {
             if (offset < 1530) {
                 section1.style.transform = `translate(0, ${offset - vh}px)`;
+
                 if (vw > 1300)
                 section2.style.transform = `translate(0, ${offset - 1.3*vh}px)`
+
                 else section2.style.transform = `translate(0, ${offset - vh}px)`;
 
             }
