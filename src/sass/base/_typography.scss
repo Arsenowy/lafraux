@@ -5,3 +5,62 @@ body {
   color: $color-black;
   line-height: 1.7;
 }
+
+.button {
+
+  &__simple {
+    position: relative;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 2.2rem;
+    font-family: Montserrat;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.4s 0.75s,
+                opacity 0s 0.3s;
+
+
+    &:hover {
+      color: white;
+    }
+    &:active,
+    &:focus {
+      border: none;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: 0.5s width cubic-bezier(.56,.08,.08,.83),
+                  0.5s 0.5s height cubic-bezier(.56,.08,.08,.83),
+                  0.3s transform cubic-bezier(.56,.08,.08,.83);
+    }
+
+    &:hover::after  {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:active::after,
+    &:focus::after   {
+      transform: scaleY(0);
+
+    }
+
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
