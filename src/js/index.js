@@ -4,6 +4,8 @@ import "regenerator-runtime/runtime";
 
 // local
 import "../sass/style.scss";
+import '../home-office.html';
+import '../elegance.html';
 
 // import * as slider from './Slider';
 

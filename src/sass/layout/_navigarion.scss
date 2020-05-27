@@ -77,9 +77,10 @@
     line-height: 1.25;
     transition: 0.5s all;
 
-    //animation
-    transform: translateX(-100%);
-    opacity: 0;
+    &__main {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 
     //animation
     &__active {
