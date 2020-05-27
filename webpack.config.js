@@ -20,7 +20,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: "./src/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "elegance.html",
+      template: "./src/elegance.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "home-office.html",
+      template: "./src/home-office.html",
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
@@ -85,9 +94,13 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: "file-loader",
+            options: {
+              name: '[name].[ext]'
+            }
           },
         ],
+        exclude: path.resolve(__dirname, './src/index.html')
       },
     ],
   },
