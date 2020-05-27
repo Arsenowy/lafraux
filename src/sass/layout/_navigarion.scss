@@ -69,17 +69,23 @@
 
 .logo {
     font-family: roboto, sans-serif;
-    position: fixed;
+    position: relative;
     z-index: 999;
     top: 5rem;
-    left: 10rem;
+    left: 7.5vw;
     padding: 1rem;
     line-height: 1.25;
     transition: 0.5s all;
 
+    @include respond (sm) {
+        left: 5vw;
+    }
+
     &__main {
         transform: translateX(-100%);
         opacity: 0;
+        position: fixed;
+        left: 10rem;
     }
 
     //animation
