@@ -91,6 +91,7 @@
         flex-basis: 70%;
         margin: 0 auto;
 
+
         @include respond (tab) {
             flex-basis: 50%;
         }
@@ -189,6 +190,7 @@
     &__img {
         height: 100%;
         width: 100%;
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.08);
     }
 }
 
