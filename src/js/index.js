@@ -22,7 +22,8 @@ let vw = window.innerWidth;
 //different functions as default
 if (vw > 920) {
     parallax.parallaxFunction();
-} else parallax.parallaxFunctionMobile();
+}
+else parallax.parallaxFunctionMobile();
 
 //different functions after resize
 window.addEventListener('resize', () => {
@@ -30,7 +31,8 @@ window.addEventListener('resize', () => {
 
     if (vw > 920) {
         parallax.parallaxFunction();
-    } else parallax.parallaxFunctionMobile();
+    }
+    else parallax.parallaxFunctionMobile();
 
 });
 

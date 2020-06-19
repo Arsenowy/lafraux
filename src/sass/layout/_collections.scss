@@ -8,12 +8,23 @@
         flex: 1;
         font-family: Roboto, sans-serif;
 
+        @include respond(sm) {
+            display: block;
+            position: absolute;
+            @include centering;
+            top: 100%;
+            background-color: #fff;
+            padding: 2rem;
+
+        }
+
         &--1 {
             align-items: flex-end;
         }
 
         &--2 {
             align-items: flex-start;
+
         }
     }
 
@@ -21,6 +32,14 @@
         font-size: 8rem;
         text-align: center;
         font-weight: 700;
+
+        @include respond(md) {
+            font-size: 7.2rem;
+        }
+
+        @include respond(md) {
+            font-size: 6rem;
+        }
     }
 
     &__paragraph {
@@ -28,6 +47,10 @@
         text-align: center;
         text-transform: uppercase;
         font-weight: 300;
+
+        @include respond(md) {
+            font-size: 2rem;
+        }
 
     }
 
@@ -46,6 +69,10 @@
         grid-gap: 5rem;
         padding: 5rem 0;
         margin: 0 10rem;
+
+        @include respond(md) {
+            margin: 0 5rem;
+        }
     }
 
     &__photo {
@@ -54,6 +81,10 @@
         min-width: 270px;
         max-width: 18vw;
         transition: all 1s ease;
+
+        @include respond(sm) {
+            min-width: 40vw;
+        }
 
         //first img is 2 times higher then others
         &--1-1,

@@ -27,12 +27,13 @@ window.addEventListener('resize', () => {
 //math.pow to achive fast increasing speed
 
 
+
 export const parallaxFunction = () => {
 
     window.addEventListener('scroll', () => {
         let offset = window.pageYOffset;
 
-        if (offset > vh){
+        if (offset > vh && vw > 920){
             //logo in the left corner
             logo.classList.add('logo__active');
             man0.style.transform = `translate(${-Math.pow(vh-offset, 2)/175}px, ${offset - vh}px)`
@@ -59,6 +60,7 @@ export const parallaxFunction = () => {
 
         //////////////////////////////////////////////////
         //moving collections
+
         if (vh < 1000) {
             if (offset < 1330){
                 section1.style.transform = `translate(0, ${offset - vh}px)`;
@@ -82,6 +84,7 @@ export const parallaxFunction = () => {
                 else section2.style.transform = `translate(0, ${offset - vh}px)`;
             }
         }
+
         /////////////////////////////////////////////
 
         // Changing size of images in collections
@@ -109,6 +112,63 @@ export const parallaxFunction = () => {
             Array.from(collectionPhoto).forEach(cur => {
                 cords.top < 150 ? cur.style.minWidth = "22vw" : cur.style.minWidth = "26vw"
             })
+        }
+    })
+
+}
+export const parallaxFunctionMobile = () => {
+
+    //reset
+    section1.style.transform = `translate(0, 0)`;
+    section2.style.transform = `translate(0, 0)`;
+    man0.style.transform = `translate(0, 0)`;
+    man1.style.transform = `translate(0, 0)`;
+    man2.style.transform = `translate(0, 50vh)`;
+    man3.style.transform = `translate(0, 50vh)`;
+
+    window.addEventListener('scroll', () => {
+        let offset = window.pageYOffset;
+        let cords = man3.getBoundingClientRect();
+        console.log(cords.top);
+
+        if (cords.top > 0.7*vh) {
+            section1.style.transform = `translate(0, ${offset - vh}px)`;
+            section2.style.transform = `translate(0, ${offset - vh}px)`;
+        }
+
+        if (offset > vh && offset < (vh + 1.22*vw)){
+            man0.style.transform = `translate(0, ${offset - vh}px)`;
+        }
+
+        // 2 images -> first img = 100vh, second 1.22*vw | 1.22 const | 0.6 - 60% of vw
+        if (offset > (vh + 1.22*vw) && vw<765){
+            man2.style.transform = `translate(0, ${0.5*vh - (offset -  (vh + vw)) < 0 ? 0 : 0.5*vh - (offset -  (vh + vw))}px)`;
+            man3.style.transform = `translate(0, ${0.5*vh - (offset -  (vh + 1.55*vw)) < 0 ? 0 : 0.5*vh - (offset -  (vh + 1.55*vw))}px)`;
+
+            if (vw < 600) {
+                if (cords.top > vh) {
+                    section1.style.transform = `translate(0, ${offset - vh}px)`;
+                    section2.style.transform = `translate(0, ${offset - vh}px)`;
+                }
+            }
+            if (vw >= 600) {
+                if (cords.top > 0.4*vh) {
+                    section1.style.transform = `translate(0, ${offset - vh}px)`;
+                    section2.style.transform = `translate(0, ${offset - vh}px)`;
+                }
+            }
+
+
+        }
+
+        if (offset > (vh + 1.7*vw) && vw>=765 && vw<=920){
+            man2.style.transform = `translate(0, ${0.5*vh - (offset -  (vh + 1.7*vw)) < 0 ? 0 : 0.5*vh - (offset -  (vh + 1.7*vw))}px)`;
+            man3.style.transform = `translate(0, ${0.5*vh - (offset -  (vh + 2*vw)) < 0 ? 0 : 0.5*vh - (offset -  (vh + 2*vw))}px)`;
+
+            if (cords.top > 0.2*vh) {
+                section1.style.transform = `translate(0, ${offset - vh}px)`;
+                section2.style.transform = `translate(0, ${offset - vh}px)`;
+            }
         }
     })
 

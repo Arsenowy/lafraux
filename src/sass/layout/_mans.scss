@@ -9,6 +9,11 @@
             width: calc(0.82*100vh);
             top: 0;
             left: 0;
+
+            @include respond (tab) {
+                width: 100vw;
+                height: calc(1.22*100vw);
+            }
         }
         &--1 {
             position: absolute;
@@ -17,6 +22,14 @@
             top: 0;
             left: calc(0.82*100vh);
             z-index: 2;
+
+            @include respond (tab) {
+                position: relative;
+                width: 100vw;
+                height: calc(1.22*100vw);
+                left: 0;
+                top: 0;
+            }
 
             &::after {
                 content: 'ZARA';
@@ -28,7 +41,23 @@
                 text-align: center;
                 font-size: 12rem;
 
-
+                @include respond (tab) {
+                        content: "ACTIVE UTILITY STORIES";
+                        background-color: #fff;
+                        padding: 2rem;
+                        font-weight: 700;
+                        display: inline-block;
+                        line-height: 1.1;
+                        position: absolute;
+                        transform: translateX(-50%);
+                        top: auto;
+                        left: 50%;
+                        bottom: -50px;
+                        width: 100%;
+                        padding: 5rem;
+                        font-size: 6rem;
+                        text-align: center;
+                }
             }
         }
         &--2 {
@@ -39,6 +68,14 @@
             left: calc(2*0.82*100vh);
             z-index: 3;
             font-size: 8rem;
+
+            @include respond (tab) {
+                position: relative;
+                width: 60vw;
+                height: calc(1.22*60vw);
+                left: 0;
+                top: 50px;
+            }
 
             &::before {
                 content: 'ACTIVE UTILITY STORIES';
@@ -53,6 +90,9 @@
                 transform: translateX(-7rem);
                 line-height: 1.1;
 
+                @include respond (tab) {
+                    display: none;
+                }
 
             }
         }
@@ -63,6 +103,16 @@
             bottom: 0;
             left: calc(2*0.82*100vh);
             z-index: 2;
+
+            @include respond (tab) {
+                position: relative;
+                z-index: 4;
+                width: 50vw;
+                height: calc(1.22*60vw);
+                bottom: auto;
+                left: 50vw;
+                top: -50vw;
+            }
             }
 
 
@@ -81,5 +131,9 @@
         background-color: #fff;
         width: calc(0.82*50vh);
         height: 50vh;
+
+        @include respond (tab) {
+            display: none;
+        }
     }
 }

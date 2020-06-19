@@ -63,4 +63,9 @@ body {
       outline: none;
     }
   }
+
+  &__simple-container {
+    display: flex;
+    justify-content: center;
+  }
 }
