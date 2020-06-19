@@ -8,6 +8,8 @@
   padding: 0 5rem;
   animation-name: changeWidthLarge;
 
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.15);
+
   @include respond(big-desktop) {
     width: 100rem;
     height: 100rem;

@@ -85,6 +85,7 @@
         @include respond(sm) {
             min-width: 40vw;
         }
+        box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.1);
 
         //first img is 2 times higher then others
         &--1-1,
