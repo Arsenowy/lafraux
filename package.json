@@ -4,7 +4,7 @@
   "description": "Interactive Map.",
   "main": "src/index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "fullpage.js": "^3.0.8",
     "leaflet": "^1.6.0",
